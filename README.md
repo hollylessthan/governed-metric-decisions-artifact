@@ -1,22 +1,29 @@
-# Governed Metric Decisions — AGENT 2027 Artifact (Draft)
+# Governed Metric Decisions — AGENT 2027 Reproduction Artifact (candidate)
 
-This is an **in-progress, unverified** evidence package for the empirical study of execute, clarify, and reject decisions on governed metric requests. It is not yet a complete reproducibility package.
+**Draft / private until publication review.** This package contains the frozen source evidence and calculation script for the empirical study of governed-metric execution decisions. It is not yet an independently validated public release.
 
-## Included initial evidence
-- `paper/agent-2027-routing-evidence.md` and `.json`: generated tables and source metadata.
-- `reports/mia-bench-b4-b5-audit/`: frozen B4/B5 disagreement audit and cases.
-- `reports/mia-bench-holdout-synthesis/summary.json`: model-level holdout evidence.
-- `scripts/agent_2027_routing_evidence.py`: original evidence calculation.
-- `docs/mia-bench-b4-b5-audit-2026-10-24.md`: audit interpretation.
+## Offline reproduce and check (no model API calls)
 
-Files are copied without rewriting from `hollylessthan/metric-intent-assurance` main as inspected on 2026-10-25.
+Requires Python 3.10+ and only the standard library:
 
-## Study scope
-B4 direct and B5 candidate-assisted routing are central. B1–B3 are interpretation-stage context, not same-task authorization baselines. MIA is retained as historical/contextual evidence, not presented as a newly proposed architecture.
+```bash
+python scripts/agent_2027_routing_evidence.py --check
+```
 
-The paper's action evaluation is not a test of numerical answer accuracy, full intent recovery or production safety. Results use frozen outputs and include descriptive analyses performed after the original study; they are not newly confirmatory experiments.
+The command reconstructs the published routing-evidence JSON and Markdown from:
+- original holdout synthesis and B4/B5 case audit
+- committed provider scenario actions (Qwen, OpenAI, Anthropic)
+- the original governance-pair summary and frozen generated-manifest code
+- exactly the original AGENT argument-skeleton tables
 
-## Reproduction TODO
-The original source data, runner dependencies, model metadata, precise source commit manifests, public-distribution audit, and clean offline reproduction checks still need to be added. **Do not treat this first import as a successful reproduction.** No new API calls should be made to replace frozen evidence.
+It validates SHA-256 hashes recorded in `paper/agent-2027-routing-evidence.json` and fails if any derived output or table differs. **Do not rerun the providers**: historic model outputs are frozen and live calls are neither deterministic nor required for this verification.
 
-After verification, freeze a public release and optionally archive the release on Zenodo.
+## Evidence scope
+
+B4 (direct) versus B5 (candidate-assisted) is the central same-task descriptive comparison. B1–B3 are interpretation-stage context and not same-task authorization controls. MIA is retained in the original study history, not introduced here as a novel method. The population here is 101 authority units per model (37 ALLOW, 64 non-ALLOW); action correctness does not establish complete metric correctness or production safety. Retrospective descriptive selection is not a new confirmatory study.
+
+## Current status and remaining review
+
+Original source: `hollylessthan/metric-intent-assurance`, source revision `f4cfd26d5fb1a2770a527ae31d25f8afebbc928f` (as recorded by the generator). File-level hashes are in the generated JSON. Initial import also includes audit interpretation.
+
+Before public release: run the command in a clean checkout, inspect differences if any, validate licensing/privacy/secrets, reconcile final camera-ready tables, add provider run snapshots/metadata where missing, and tag an immutable release. Public Zenodo DOI is optional and comes afterward. **A passing clean-room reproduction has not yet been recorded.**
