@@ -207,47 +207,9 @@ def build(root=ROOT):
         '[audit assessment](../docs/mia-bench-b4-b5-audit-2026-10-24.md). '
         'Input hashes are in [the companion JSON](agent-2027-routing-evidence.json).', '',
         'The old 23-unit MIA-representability subset does not define this descriptive paper population. '
-        'Original MIA tests, results and historical exact-intent CEC remain in '
-        '[the retained legacy evidence sheet](agent-2027-evidence.md). '
+        'Original MIA experiments and historical exact-intent CEC are distinct from this paper-focused analysis. '
         'No statistical superiority, equivalence, causal candidate effect, numerical correctness or production safety claim follows.', '']
     return json.dumps(data, indent=2, sort_keys=True) + '\n', '\n'.join(lines)
-
-
-def check_draft_tables(data, root=ROOT):
-    """Catch transcription errors in all three manuscript tables."""
-    found_quality, found_disagreements, found_pairs = {}, {}, {}
-    for line in (Path(root) / 'paper/agent-2027-argument-skeleton.md').read_text().splitlines():
-        if not line.startswith('|'):
-            continue
-        cells = [c.strip() for c in line.strip('|').split('|')]
-        if not cells or cells[0] not in MODEL_KEYS:
-            continue
-        if len(cells) == 6 and cells[1] in ('Direct B4', 'Candidate B5'):
-            sid = cells[1].split()[-1]
-            found_quality[(cells[0], sid)] = cells[2:]
-        elif len(cells) == 5 and all(c.endswith('/15') for c in cells[1:]):
-            found_pairs[cells[0]] = cells[1:]
-        elif len(cells) == 5:
-            found_disagreements[cells[0]] = cells[1:]
-    if len(found_quality) != 6 or len(found_disagreements) != 3 or len(found_pairs) != 3:
-        raise ValueError('draft routing table membership differs')
-    for name, model in data['holdout'].items():
-        for sid in ('B4', 'B5'):
-            v = model['systems'][sid]
-            expected = [f"{v['allow_executes']}/37", f"{v['unsafe_executes']}/64",
-                        f"{v['three_way_correct']}/101", f"{v['terminal_failures']}/101"]
-            if found_quality[(name, sid)] != expected:
-                raise ValueError('draft quality table differs: ' + name + '/' + sid)
-        d = model['disagreements']; o = d['outcomes']
-        expected = [str(d['disagreements'])] + [str(o.get(k, 0)) for k in
-            ('b4_only_correct', 'b5_only_correct', 'neither_correct')]
-        if found_disagreements[name] != expected:
-            raise ValueError('draft disagreement table differs: ' + name)
-        pairs = data['governance_pairs']['models'][name]
-        expected = [f"{pairs[sid][k]}/15" for k in ('binary_both_correct', 'three_way_both_correct')
-                    for sid in ('B4', 'B5')]
-        if found_pairs[name] != expected:
-            raise ValueError('draft governance-pair table differs: ' + name)
 
 
 def main():
@@ -263,8 +225,6 @@ def main():
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(content)
-    if args.check:
-        check_draft_tables(json.loads(outputs[0]))
     print('Routing evidence verified' if args.check else 'Routing evidence generated; zero provider calls')
 
 

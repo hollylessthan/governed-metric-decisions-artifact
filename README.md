@@ -47,7 +47,7 @@ python scripts/agent_2027_routing_evidence.py --check
 python scripts/agent_2027_paper_tables.py --check
 ```
 
-This command reads the committed holdout synthesis, B4/B5 audit, provider scenario actions (Qwen, OpenAI, Anthropic), governance-pair source, and frozen manifest generator. It reconstructs the routing-evidence JSON and Markdown, checks recorded SHA-256 input hashes, and fails if checked outputs or paper tables differ.
+The routing command checks frozen evidence and provenance; the paper-table command independently verifies the generated current manuscript tables from saved case-level reports. Neither performs new model inference.
 
 For the separate label-error audit check:
 
@@ -76,16 +76,16 @@ The [GitHub Actions reproduction workflow](.github/workflows/reproduce.yml) runs
 
 Original research was performed in the private development repository `hollylessthan/metric-intent-assurance`; outside readers cannot access it. Frozen inputs and verification code needed by the documented commands are distributed in this public artifact. Source revision: `f4cfd26d5fb1a2770a527ae31d25f8afebbc928f`. Generated evidence records file-level hashes so the copied inputs can be checked independently.
 
-Original model prompts were frozen before holdout unlock, and their holdout outputs were collected under that protocol. **The selection of the present B4/B5 paper question and its additional audits was retrospective.** Results are descriptive, not a preregistered test of this particular comparison. The synthetic worlds and shared scenarios constrain generalizability. Action accuracy alone does not establish exact metric interpretation, numerical correctness, authorization enforcement, or production safety.
+Original model prompts were frozen before holdout unlock, and their holdout outputs were collected under that protocol. **The evaluated model outputs were collected using prompts frozen before holdout access.** Reported comparisons and analyses are descriptive; they are not a preregistered confirmatory evaluation of the six routes. The synthetic worlds and shared scenarios constrain generalizability. Action accuracy alone does not establish exact metric interpretation, numerical correctness, authorization enforcement, or production safety.
 
 ## Archived versions and citation
 
-**Frozen artifact v1.0.0:** [Zenodo record](https://zenodo.org/records/23649604) · [version-specific DOI](https://doi.org/10.5281/zenodo.23649604) · [GitHub release](https://github.com/hollylessthan/governed-metric-decisions-artifact/releases/tag/v1.0.0).
+**Historical archived v1.0.0 (does not reproduce the updated manuscript Tables I and II):** [Zenodo record](https://zenodo.org/records/23649604) · [version-specific DOI](https://doi.org/10.5281/zenodo.23649604) · [GitHub release](https://github.com/hollylessthan/governed-metric-decisions-artifact/releases/tag/v1.0.0).
 
-For reproducibility and citations to these frozen experimental records, use the version-specific DOI `10.5281/zenodo.23649604`, rather than the moving `main` branch. Subsequent commits to this repository do not alter the archived v1.0.0 snapshot. The repository is available under the [Apache-2.0 license](LICENSE).
+**Do not cite v1.0.0 for the revised paper.** Its DOI `10.5281/zenodo.23649604` identifies only the older frozen snapshot. Cite the forthcoming version-specific v1.1.0 DOI after Zenodo creates it. Subsequent commits to this repository do not alter the archived v1.0.0 snapshot. The repository is available under the [Apache-2.0 license](LICENSE).
 
 The artifact supports deterministic, offline regeneration and verification of reported analysis using the archived benchmark records and model outputs; it does not require or repeat live model inference. It is supporting research evidence, not a claim that a paper has been accepted.
 
 ## Current paper synchronization (v1.1.0 candidate)
 
-Reproduce manuscript Tables I and II with `python scripts/agent_2027_paper_tables.py --check`. Inputs include `reports/agent-2027-differentiation/summary.json` and the frozen case records. The generated tables are at `paper/agent2027/generated/quality.tex` and `kinds.tex`. The v1.0.0 Zenodo DOI documents the earlier artifact snapshot, not these added outputs; cite the new version-specific DOI only after archiving v1.1.0.
+Reproduce manuscript Tables I and II with `python scripts/agent_2027_paper_tables.py --check`. Inputs include `reports/agent-2027-differentiation/summary.json` and the frozen case records. Only `paper/agent2027/generated/quality.tex` and `kinds.tex` are incorporated as Tables I and II in the current manuscript; `changes.tex`, `pairs.tex`, and `disagreements.tex` are auxiliary generated outputs. The v1.0.0 Zenodo DOI documents the earlier artifact snapshot, not these added outputs; cite the new version-specific DOI only after archiving v1.1.0.
