@@ -1,0 +1,12 @@
+{
+  "generator_sha256": "6173fbcf2b2a54f5f97fe519a651d6205c25f471963720a6e4258cdc372bb1dc",
+  "inputs_sha256": {
+    "paper/agent-2027-routing-evidence.json": "d9aec86af9d2e4abbd79df45c436f958026b8e4dd9fefade813132af47afd3fe",
+    "reports/agent-2027-differentiation/summary.json": "bf17d8e0c3536e76ae9e58974d267a326626aa8c9858273ce81b5d0f516cf638",
+    "reports/agent-2027-label-error-audit/summary.json": "3b6342dba5a3fa3f02e17d8ce5790909e1190354c9bdbab22b2f5c0dc469ec80",
+    "reports/mia-bench-failure-decomposition/anthropic-cases.jsonl": "a5ad7f7a364faf178dfde3c34482810d3983a2c221f630746d2ab2c431e6e16e",
+    "reports/mia-bench-failure-decomposition/openai-cases.jsonl": "34b22e461a0cfdc94e320744c4617ccbd591fb46808e23c94db984f20657625e",
+    "reports/mia-bench-failure-decomposition/qwen-cases.jsonl": "4da5dfb0f0d3b993019f3c28338cddf49fa7a136f5f3e6409cb8b6e4621a83b1"
+  },
+  "role": "typesetting of committed descriptive evidence; no inference"
+}

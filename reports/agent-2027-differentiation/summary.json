@@ -1,0 +1,350 @@
+{
+  "authority_pairs": {
+    "by_change": [
+      {
+        "binary_flip_pairs": 3,
+        "change": "aggregation safety (fanout)",
+        "pair_ids": [
+          "CF-COMMERCE-AUTHORITY-04",
+          "CF-FINANCE-AUTHORITY-01",
+          "CF-SUPPORT-AUTHORITY-02"
+        ],
+        "pairs": 3,
+        "routes": {
+          "anthropic": {
+            "B4": {
+              "both_binary": 3,
+              "both_exact": 3
+            },
+            "B5": {
+              "both_binary": 3,
+              "both_exact": 3
+            }
+          },
+          "openai": {
+            "B4": {
+              "both_binary": 3,
+              "both_exact": 3
+            },
+            "B5": {
+              "both_binary": 3,
+              "both_exact": 3
+            }
+          },
+          "qwen": {
+            "B4": {
+              "both_binary": 2,
+              "both_exact": 2
+            },
+            "B5": {
+              "both_binary": 2,
+              "both_exact": 2
+            }
+          }
+        }
+      },
+      {
+        "binary_flip_pairs": 2,
+        "change": "certification",
+        "pair_ids": [
+          "CF-COMMERCE-AUTHORITY-13",
+          "CF-FINANCE-AUTHORITY-03"
+        ],
+        "pairs": 2,
+        "routes": {
+          "anthropic": {
+            "B4": {
+              "both_binary": 2,
+              "both_exact": 2
+            },
+            "B5": {
+              "both_binary": 2,
+              "both_exact": 2
+            }
+          },
+          "openai": {
+            "B4": {
+              "both_binary": 2,
+              "both_exact": 2
+            },
+            "B5": {
+              "both_binary": 2,
+              "both_exact": 2
+            }
+          },
+          "qwen": {
+            "B4": {
+              "both_binary": 2,
+              "both_exact": 2
+            },
+            "B5": {
+              "both_binary": 2,
+              "both_exact": 2
+            }
+          }
+        }
+      },
+      {
+        "binary_flip_pairs": 5,
+        "change": "principal access",
+        "pair_ids": [
+          "CF-COMMERCE-AUTHORITY-05",
+          "CF-FINANCE-AUTHORITY-00",
+          "CF-SAAS-AUTHORITY-05",
+          "CF-SAAS-AUTHORITY-10",
+          "CF-SUPPORT-AUTHORITY-11"
+        ],
+        "pairs": 5,
+        "routes": {
+          "anthropic": {
+            "B4": {
+              "both_binary": 5,
+              "both_exact": 5
+            },
+            "B5": {
+              "both_binary": 2,
+              "both_exact": 2
+            }
+          },
+          "openai": {
+            "B4": {
+              "both_binary": 5,
+              "both_exact": 5
+            },
+            "B5": {
+              "both_binary": 5,
+              "both_exact": 5
+            }
+          },
+          "qwen": {
+            "B4": {
+              "both_binary": 2,
+              "both_exact": 2
+            },
+            "B5": {
+              "both_binary": 1,
+              "both_exact": 1
+            }
+          }
+        }
+      },
+      {
+        "binary_flip_pairs": 3,
+        "change": "relationship path",
+        "pair_ids": [
+          "CF-COMMERCE-AUTHORITY-03",
+          "CF-FINANCE-AUTHORITY-02",
+          "CF-SAAS-AUTHORITY-00",
+          "CF-SUPPORT-AUTHORITY-08"
+        ],
+        "pairs": 4,
+        "routes": {
+          "anthropic": {
+            "B4": {
+              "both_binary": 4,
+              "both_exact": 4
+            },
+            "B5": {
+              "both_binary": 4,
+              "both_exact": 4
+            }
+          },
+          "openai": {
+            "B4": {
+              "both_binary": 4,
+              "both_exact": 4
+            },
+            "B5": {
+              "both_binary": 4,
+              "both_exact": 4
+            }
+          },
+          "qwen": {
+            "B4": {
+              "both_binary": 4,
+              "both_exact": 2
+            },
+            "B5": {
+              "both_binary": 3,
+              "both_exact": 1
+            }
+          }
+        }
+      },
+      {
+        "binary_flip_pairs": 1,
+        "change": "required context (FX)",
+        "pair_ids": [
+          "CF-FINANCE-AUTHORITY-05"
+        ],
+        "pairs": 1,
+        "routes": {
+          "anthropic": {
+            "B4": {
+              "both_binary": 1,
+              "both_exact": 0
+            },
+            "B5": {
+              "both_binary": 1,
+              "both_exact": 0
+            }
+          },
+          "openai": {
+            "B4": {
+              "both_binary": 1,
+              "both_exact": 1
+            },
+            "B5": {
+              "both_binary": 1,
+              "both_exact": 1
+            }
+          },
+          "qwen": {
+            "B4": {
+              "both_binary": 1,
+              "both_exact": 0
+            },
+            "B5": {
+              "both_binary": 1,
+              "both_exact": 0
+            }
+          }
+        }
+      }
+    ],
+    "total": 15,
+    "totals": {
+      "anthropic": {
+        "B4": {
+          "both_binary": 15,
+          "both_exact": 14
+        },
+        "B5": {
+          "both_binary": 12,
+          "both_exact": 11
+        }
+      },
+      "openai": {
+        "B4": {
+          "both_binary": 15,
+          "both_exact": 15
+        },
+        "B5": {
+          "both_binary": 15,
+          "both_exact": 15
+        }
+      },
+      "qwen": {
+        "B4": {
+          "both_binary": 11,
+          "both_exact": 8
+        },
+        "B5": {
+          "both_binary": 9,
+          "both_exact": 6
+        }
+      }
+    }
+  },
+  "capability_pairs": {
+    "pair_ids": [
+      "CF-COMMERCE-CAPABILITY-05",
+      "CF-COMMERCE-CAPABILITY-07",
+      "CF-FINANCE-CAPABILITY-03",
+      "CF-SAAS-CAPABILITY-06",
+      "CF-SAAS-CAPABILITY-08",
+      "CF-SAAS-CAPABILITY-13",
+      "CF-SUPPORT-CAPABILITY-02",
+      "CF-SUPPORT-CAPABILITY-12",
+      "CF-SUPPORT-CAPABILITY-13"
+    ],
+    "results": {
+      "anthropic": {
+        "B4": {
+          "pairs_both_execute": 9,
+          "pairs_same_action": 9,
+          "scenarios_coverage_gap": 0,
+          "scenarios_executed": 18,
+          "scenarios_refused_as_policy": 0
+        },
+        "B5": {
+          "pairs_both_execute": 9,
+          "pairs_same_action": 9,
+          "scenarios_coverage_gap": 0,
+          "scenarios_executed": 18,
+          "scenarios_refused_as_policy": 0
+        },
+        "MIA": {
+          "pairs_both_execute": 3,
+          "pairs_same_action": 8,
+          "scenarios_coverage_gap": 11,
+          "scenarios_executed": 7,
+          "scenarios_refused_as_policy": 0
+        }
+      },
+      "openai": {
+        "B4": {
+          "pairs_both_execute": 9,
+          "pairs_same_action": 9,
+          "scenarios_coverage_gap": 0,
+          "scenarios_executed": 18,
+          "scenarios_refused_as_policy": 0
+        },
+        "B5": {
+          "pairs_both_execute": 9,
+          "pairs_same_action": 9,
+          "scenarios_coverage_gap": 0,
+          "scenarios_executed": 18,
+          "scenarios_refused_as_policy": 0
+        },
+        "MIA": {
+          "pairs_both_execute": 6,
+          "pairs_same_action": 9,
+          "scenarios_coverage_gap": 6,
+          "scenarios_executed": 12,
+          "scenarios_refused_as_policy": 0
+        }
+      },
+      "qwen": {
+        "B4": {
+          "pairs_both_execute": 9,
+          "pairs_same_action": 9,
+          "scenarios_coverage_gap": 0,
+          "scenarios_executed": 18,
+          "scenarios_refused_as_policy": 0
+        },
+        "B5": {
+          "pairs_both_execute": 9,
+          "pairs_same_action": 9,
+          "scenarios_coverage_gap": 0,
+          "scenarios_executed": 18,
+          "scenarios_refused_as_policy": 0
+        },
+        "MIA": {
+          "pairs_both_execute": 4,
+          "pairs_same_action": 8,
+          "scenarios_coverage_gap": 9,
+          "scenarios_executed": 9,
+          "scenarios_refused_as_policy": 0
+        }
+      }
+    },
+    "scenarios": 18,
+    "total": 9
+  },
+  "inputs": {
+    "reports/mia-bench-contribution-assessment/summary.json": "e056aea3194b9d2644dd7a331f4748c8f1d53bc7144886474bd167e3bad2fd2a",
+    "reports/mia-bench-failure-decomposition/anthropic-cases.jsonl": "a5ad7f7a364faf178dfde3c34482810d3983a2c221f630746d2ab2c431e6e16e",
+    "reports/mia-bench-failure-decomposition/openai-cases.jsonl": "34b22e461a0cfdc94e320744c4617ccbd591fb46808e23c94db984f20657625e",
+    "reports/mia-bench-failure-decomposition/qwen-cases.jsonl": "4da5dfb0f0d3b993019f3c28338cddf49fa7a136f5f3e6409cb8b6e4621a83b1",
+    "scripts/agent_2027_differentiation_evidence.py": "91a5ce0fbeb07cebdd418afe625f39f41f198f9e0a8f934005aa7afa64d9aa6e",
+    "src/mia_bench/expanded_serialization_v3.py": "e7e48137a6ddead0d20ff25950d1ae08c3ec124bf724b68eb09f35449650d89d",
+    "src/mia_bench/expanded_worlds_v3.py": "f0ee542cbc7282ab615538e72508bd2579bc4375de6d6b9b45b94858e107a23d",
+    "src/mia_bench/final_manifest_v3.py": "a4d771d903a6358bc458a0f4f5e0ab54da930a6922d71d9319573ff1c439d41a",
+    "src/mia_bench/natural_surfaces_v3.py": "f9e85fbab869069f2fc297c329de24f4cb943786151bf999e9773b241bfea686",
+    "src/mia_bench/oracle_v3.py": "3476c96c431064b62e7ca9f8a2c33f73d5c80942056bc1853e2dc51a0769d27f",
+    "src/mia_bench/oracle_v4.py": "a76eaa68ee0ae91d0a9c519d966b9f5c4b699f15b64d4b4547611dc3cc058aa5",
+    "src/mia_bench/worlds_v2.py": "19518f1f40895276b296a339115330989006b32c7cf11ed04700f718499c4bb9"
+  },
+  "role": "post-hoc descriptive grouping of existing holdout outputs; no provider calls; not a new confirmatory endpoint"
+}

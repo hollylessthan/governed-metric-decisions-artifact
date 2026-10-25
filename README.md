@@ -4,7 +4,7 @@
 
 This repository packages the frozen experimental evidence and offline verification code for a study of **pre-execution decisions for governed metric requests**. It supports inspection and recalculation of reported results without new language-model API calls.
 
-**Research question.** When an analytics agent receives a metric request alongside governed definitions and access rules, can it correctly decide to **execute**, **clarify**, or **reject** before execution? How does a direct decision route compare with a route that additionally reviews an upstream structured candidate?
+**Research question.** When an analytics agent receives a metric request alongside governed definitions and access rules, can it correctly decide to **execute**, **clarify**, or **reject** before execution? How do Direct and Review compare with explicit Rules, MIA, and fail-closed combined routes?
 
 This is a *decision-component* study on synthetic governed worlds, not an evaluation of numerical answers, a production authorization system, or a new assurance mechanism.
 
@@ -17,7 +17,7 @@ This is a *decision-component* study on synthetic governed worlds, not an evalua
 - **Primary descriptive cohort in this package:** 101 holdout authority representatives *per model*: 37 ALLOW and 64 non-ALLOW. The other holdout scenarios include feasibility cases and a duplicate.
 - **Governance-pair analysis:** 15 identical-request authority pairs change governed-world facts; 14 require a binary execute/stop flip. Nine separate feasibility pairs are outside that analysis.
 
-The original source study also includes B1–B3 interpretation stages and Metric Intent Assurance (MIA). These are preserved as historical context; B1–B3 are **not** same-task authorization controls, and this artifact does not claim MIA as a new method.
+B1–B3 are interpretation stages, not same-task authorization controls. The current paper reports Rules, Direct+Rules, MIA, and Direct+MIA alongside Direct and Review. Rules and Direct+Rules use the label-defining rules and are upper-bound comparisons; MIA is a deployable validator with coverage gaps.
 
 ## Key holdout results
 
@@ -44,6 +44,7 @@ The full count reconciliation, different refusal types, 21 holdout disagreements
 git clone https://github.com/hollylessthan/governed-metric-decisions-artifact.git
 cd governed-metric-decisions-artifact
 python scripts/agent_2027_routing_evidence.py --check
+python scripts/agent_2027_paper_tables.py --check
 ```
 
 This command reads the committed holdout synthesis, B4/B5 audit, provider scenario actions (Qwen, OpenAI, Anthropic), governance-pair source, and frozen manifest generator. It reconstructs the routing-evidence JSON and Markdown, checks recorded SHA-256 input hashes, and fails if checked outputs or paper tables differ.
@@ -73,14 +74,18 @@ The [GitHub Actions reproduction workflow](.github/workflows/reproduce.yml) runs
 
 ## Provenance and interpretation
 
-The imported source is [`hollylessthan/metric-intent-assurance`](https://github.com/hollylessthan/metric-intent-assurance), source revision [`f4cfd26d5fb1a2770a527ae31d25f8afebbc928f`](https://github.com/hollylessthan/metric-intent-assurance/commit/f4cfd26d5fb1a2770a527ae31d25f8afebbc928f). Generated evidence records file-level hashes so the copied inputs can be checked independently.
+Original research was performed in the private development repository `hollylessthan/metric-intent-assurance`; outside readers cannot access it. Frozen inputs and verification code needed by the documented commands are distributed in this public artifact. Source revision: `f4cfd26d5fb1a2770a527ae31d25f8afebbc928f`. Generated evidence records file-level hashes so the copied inputs can be checked independently.
 
 Original model prompts were frozen before holdout unlock, and their holdout outputs were collected under that protocol. **The selection of the present B4/B5 paper question and its additional audits was retrospective.** Results are descriptive, not a preregistered test of this particular comparison. The synthetic worlds and shared scenarios constrain generalizability. Action accuracy alone does not establish exact metric interpretation, numerical correctness, authorization enforcement, or production safety.
 
-## Archived version and citation
+## Archived versions and citation
 
 **Frozen artifact v1.0.0:** [Zenodo record](https://zenodo.org/records/23649604) · [version-specific DOI](https://doi.org/10.5281/zenodo.23649604) · [GitHub release](https://github.com/hollylessthan/governed-metric-decisions-artifact/releases/tag/v1.0.0).
 
 For reproducibility and citations to these frozen experimental records, use the version-specific DOI `10.5281/zenodo.23649604`, rather than the moving `main` branch. Subsequent commits to this repository do not alter the archived v1.0.0 snapshot. The repository is available under the [Apache-2.0 license](LICENSE).
 
 The artifact supports deterministic, offline regeneration and verification of reported analysis using the archived benchmark records and model outputs; it does not require or repeat live model inference. It is supporting research evidence, not a claim that a paper has been accepted.
+
+## Current paper synchronization (v1.1.0 candidate)
+
+Reproduce manuscript Tables I and II with `python scripts/agent_2027_paper_tables.py --check`. Inputs include `reports/agent-2027-differentiation/summary.json` and the frozen case records. The generated tables are at `paper/agent2027/generated/quality.tex` and `kinds.tex`. The v1.0.0 Zenodo DOI documents the earlier artifact snapshot, not these added outputs; cite the new version-specific DOI only after archiving v1.1.0.
