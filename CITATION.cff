@@ -1,23 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this research artifact, please cite the archived v1.0.0 release."
+message: "Cite the version-specific Zenodo record for the archived release."
 type: software
 title: "Governed Metric Decisions: Reproducibility Artifact"
-abstract: >-
-  Frozen benchmark records, model-decision outputs, evaluation scripts, and
-  audit evidence for the empirical study of pre-execution execute, clarify,
-  and reject decisions for governed metric requests. Supports offline
-  regeneration and verification of reported analyses without live model inference.
 authors:
   - family-names: Lo
     given-names: Fangyu
+  - family-names: Tripathi
+    given-names: Avinash
+  - family-names: Huang
+    given-names: Shiqi
 repository-code: "https://github.com/hollylessthan/governed-metric-decisions-artifact"
-version: "1.0.0"
-doi: 10.5281/zenodo.23649604
-date-released: 2026-10-25
+version: "1.1.0"
 license: Apache-2.0
 keywords:
   - agentic analytics
   - governed metrics
-  - execution authorization
   - reproducibility
-  - language models

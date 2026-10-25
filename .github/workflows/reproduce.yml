@@ -16,6 +16,8 @@ jobs:
           python-version: '3.11'
       - name: Verify frozen routing evidence
         run: python scripts/agent_2027_routing_evidence.py --check
+      - name: Verify current manuscript table outputs
+        run: python scripts/agent_2027_paper_tables.py --check
       - name: Independently implemented rule cross-check and original audit records
         run: PYTHONPATH=src python scripts/agent_2027_label_error_audit.py --check
       - name: Verify original holdout archive SHA-256

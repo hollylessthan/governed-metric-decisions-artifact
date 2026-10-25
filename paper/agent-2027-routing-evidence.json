@@ -467,7 +467,7 @@
     "reports/mia-bench-b4-b5-audit/summary.json": "dfee027adb6dcc9bdc935ca54846d1b43d38d45852d75bb80a21431c77aeed70",
     "reports/mia-bench-contribution-assessment/summary.json": "e056aea3194b9d2644dd7a331f4748c8f1d53bc7144886474bd167e3bad2fd2a",
     "reports/mia-bench-holdout-synthesis/summary.json": "a329aa9e684458ef9348aa4ee018235b89cb54134ee7c6cd103293def8f74526",
-    "scripts/agent_2027_routing_evidence.py": "1939195f87e3f86bed03819d59238cc02af1d0fb3d42450381cef3587de0c83b",
+    "scripts/agent_2027_routing_evidence.py": "27fea53c30155733a2b5a6fd26489bf6ffdcba4ace28c97c29c5ca27b0298c26",
     "src/mia_bench/analysis_plan_v3.py": "b5b7d28cec8461c070f7fb1176892a3f7dc7f18b8a2b69b99530302438b0a37d",
     "src/mia_bench/expanded_serialization_v3.py": "e7e48137a6ddead0d20ff25950d1ae08c3ec124bf724b68eb09f35449650d89d",
     "src/mia_bench/expanded_worlds_v3.py": "f0ee542cbc7282ab615538e72508bd2579bc4375de6d6b9b45b94858e107a23d",
