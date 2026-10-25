@@ -1,0 +1,534 @@
+{
+  "cases_sha256": "41107dba682026bd61041c47480b2bdb70cda4339468e7fb4ea33c02e39dd92d",
+  "disagreement_records": {
+    "holdout": 21,
+    "main": 80
+  },
+  "holdout": {
+    "anthropic": {
+      "all_scenarios": {
+        "B4": {
+          "allow_executes": 56,
+          "terminal_failures": 0,
+          "three_way_correct": 114,
+          "unsafe_executes": 2
+        },
+        "B5": {
+          "allow_executes": 55,
+          "terminal_failures": 5,
+          "three_way_correct": 106,
+          "unsafe_executes": 6
+        },
+        "allow": 56,
+        "diagnostics": {
+          "added_row_scope_still_unauthorized": 1,
+          "candidate_dependency_failure": 5,
+          "no_normalized_candidate_field_difference": 4
+        },
+        "disagreements": 10,
+        "non_allow": 64,
+        "outcomes": {
+          "b4_only_correct": 9,
+          "b5_only_correct": 1
+        },
+        "transition_counts": {
+          "ALLOW:execute->terminal_failure": 1,
+          "CLARIFY:clarify->execute": 1,
+          "CLARIFY:clarify->terminal_failure": 4,
+          "REJECT:clarify->reject": 1,
+          "REJECT:reject->execute": 3
+        },
+        "units": 120,
+        "unsafe_executes_introduced": 4,
+        "unsafe_executes_prevented": 0
+      },
+      "authority": {
+        "B4": {
+          "allow_executes": 37,
+          "terminal_failures": 0,
+          "three_way_correct": 95,
+          "unsafe_executes": 2
+        },
+        "B5": {
+          "allow_executes": 36,
+          "terminal_failures": 5,
+          "three_way_correct": 87,
+          "unsafe_executes": 6
+        },
+        "allow": 37,
+        "diagnostics": {
+          "added_row_scope_still_unauthorized": 1,
+          "candidate_dependency_failure": 5,
+          "no_normalized_candidate_field_difference": 4
+        },
+        "disagreements": 10,
+        "non_allow": 64,
+        "outcomes": {
+          "b4_only_correct": 9,
+          "b5_only_correct": 1
+        },
+        "transition_counts": {
+          "ALLOW:execute->terminal_failure": 1,
+          "CLARIFY:clarify->execute": 1,
+          "CLARIFY:clarify->terminal_failure": 4,
+          "REJECT:clarify->reject": 1,
+          "REJECT:reject->execute": 3
+        },
+        "units": 101,
+        "unsafe_executes_introduced": 4,
+        "unsafe_executes_prevented": 0
+      }
+    },
+    "openai": {
+      "all_scenarios": {
+        "B4": {
+          "allow_executes": 56,
+          "terminal_failures": 0,
+          "three_way_correct": 117,
+          "unsafe_executes": 3
+        },
+        "B5": {
+          "allow_executes": 56,
+          "terminal_failures": 0,
+          "three_way_correct": 115,
+          "unsafe_executes": 4
+        },
+        "allow": 56,
+        "diagnostics": {
+          "no_normalized_candidate_field_difference": 2
+        },
+        "disagreements": 2,
+        "non_allow": 64,
+        "outcomes": {
+          "b4_only_correct": 2
+        },
+        "transition_counts": {
+          "CLARIFY:clarify->execute": 1,
+          "CLARIFY:clarify->reject": 1
+        },
+        "units": 120,
+        "unsafe_executes_introduced": 1,
+        "unsafe_executes_prevented": 0
+      },
+      "authority": {
+        "B4": {
+          "allow_executes": 37,
+          "terminal_failures": 0,
+          "three_way_correct": 98,
+          "unsafe_executes": 3
+        },
+        "B5": {
+          "allow_executes": 37,
+          "terminal_failures": 0,
+          "three_way_correct": 96,
+          "unsafe_executes": 4
+        },
+        "allow": 37,
+        "diagnostics": {
+          "no_normalized_candidate_field_difference": 2
+        },
+        "disagreements": 2,
+        "non_allow": 64,
+        "outcomes": {
+          "b4_only_correct": 2
+        },
+        "transition_counts": {
+          "CLARIFY:clarify->execute": 1,
+          "CLARIFY:clarify->reject": 1
+        },
+        "units": 101,
+        "unsafe_executes_introduced": 1,
+        "unsafe_executes_prevented": 0
+      }
+    },
+    "qwen": {
+      "all_scenarios": {
+        "B4": {
+          "allow_executes": 52,
+          "terminal_failures": 0,
+          "three_way_correct": 100,
+          "unsafe_executes": 7
+        },
+        "B5": {
+          "allow_executes": 48,
+          "terminal_failures": 0,
+          "three_way_correct": 93,
+          "unsafe_executes": 9
+        },
+        "allow": 56,
+        "diagnostics": {
+          "additional_oracle_valid_entity_path": 3,
+          "no_normalized_candidate_field_difference": 6
+        },
+        "disagreements": 9,
+        "non_allow": 64,
+        "outcomes": {
+          "b4_only_correct": 7,
+          "neither_correct": 2
+        },
+        "transition_counts": {
+          "ALLOW:clarify->reject": 1,
+          "ALLOW:execute->clarify": 2,
+          "ALLOW:execute->reject": 2,
+          "CLARIFY:clarify->execute": 1,
+          "REJECT:execute->clarify": 1,
+          "REJECT:reject->execute": 2
+        },
+        "units": 120,
+        "unsafe_executes_introduced": 3,
+        "unsafe_executes_prevented": 1
+      },
+      "authority": {
+        "B4": {
+          "allow_executes": 34,
+          "terminal_failures": 0,
+          "three_way_correct": 82,
+          "unsafe_executes": 7
+        },
+        "B5": {
+          "allow_executes": 30,
+          "terminal_failures": 0,
+          "three_way_correct": 75,
+          "unsafe_executes": 9
+        },
+        "allow": 37,
+        "diagnostics": {
+          "additional_oracle_valid_entity_path": 3,
+          "no_normalized_candidate_field_difference": 6
+        },
+        "disagreements": 9,
+        "non_allow": 64,
+        "outcomes": {
+          "b4_only_correct": 7,
+          "neither_correct": 2
+        },
+        "transition_counts": {
+          "ALLOW:clarify->reject": 1,
+          "ALLOW:execute->clarify": 2,
+          "ALLOW:execute->reject": 2,
+          "CLARIFY:clarify->execute": 1,
+          "REJECT:execute->clarify": 1,
+          "REJECT:reject->execute": 2
+        },
+        "units": 101,
+        "unsafe_executes_introduced": 3,
+        "unsafe_executes_prevented": 1
+      }
+    }
+  },
+  "input_files_sha256": {
+    "docs/anthropic-v36-main-2026-10-07/scenario-results.jsonl": "e12f9213034664edd5cdbe29d437f56be01d4d9c04c5c36605ed7becba35713a",
+    "docs/holdout-v39-proprietary-2026-10-08/replication_anthropic-holdout-evidence-20261009T054034288852Z.zip": "b9ea32278093bcfaaa7e0f5de661976fb240b822fe398f8bb0fd176df591f421",
+    "docs/holdout-v39-proprietary-2026-10-08/replication_openai-holdout-evidence-20261009T045641583698Z.zip": "eb37a4ec0e6b8c1e595706e8573d09e2d5d64b06a82368f6fcaa1f6a2823214a",
+    "docs/holdout-v39-proprietary-analysis-2026-10-08/replication_anthropic/scenario-results.jsonl": "a7cda6f603ead96f44bb5429853e7bf742198a17d8741042f4502d5fb85dbfae",
+    "docs/holdout-v39-proprietary-analysis-2026-10-08/replication_openai/scenario-results.jsonl": "1a18b1dfe33045b54c5cc3d8058125207d18f63e8e0bd0b8247f5df7ee12c026",
+    "docs/holdout-v39-qwen-analysis-2026-10-09/primary_open_weight/scenario-results.jsonl": "bfa34a507fa36b190c840c7a99e87353f52250be8d845dd92328a51ba0a41907",
+    "docs/openai-v36-main-2026-10-07/scenario-results.jsonl": "0dd449f92066d21bfc7c8a89c95c886b55c1e664f1af5b6adf05bbd0a52fb31b",
+    "docs/qwen-holdout-v39-evidence-2026-10-09/primary_open_weight-holdout-evidence-20261010T063648437724Z.zip": "e63c269bd92a96927d65b7049758c94471fd3b986caeab18157cb03b1ba990f9",
+    "prompts/mia_bench_v3/b4.txt": "a7f8e55ad35f061c786d5beb5443fdcf59ac654935547e45379c4cbb56b97d89",
+    "prompts/mia_bench_v3/b5.txt": "fb5303101831a4f39d47a30f9c54c522ec8b2e91d5472ba9d0e1f2b607782ae3",
+    "reports/mia-bench-holdout-synthesis/summary.json": "a329aa9e684458ef9348aa4ee018235b89cb54134ee7c6cd103293def8f74526",
+    "reports/mia-bench-qwen-v35-main/scenario-results.jsonl": "3ba7a15a931de430b7cbcf43ba9222265ec3150cd60432bbfb4b7964c5e2fd25",
+    "scripts/mia_bench_b4_b5_audit.py": "9535caa89ee5a9f4240085d3dc9e6f6ccfb65af8e630154275fbb6994da94fb5",
+    "src/mia/__init__.py": "22fe133c837055d9935de2917e8f433c523d33a730fddfb778761884a3679bd6",
+    "src/mia/assurance.py": "9965dbe8f1f096de9b007953a9d80377819fca873e06305a19719bff0fca6e48",
+    "src/mia/assurance_v21.py": "09efc54c5a63f6d75ca77a9fda9cd8aac4a53dc4ac3f71c178e90e090709d91d",
+    "src/mia/benchmark.py": "176e406c4ca6c60a7762408abcab34d2400195f5aa5b4310354d6b4a292bff39",
+    "src/mia/clarification.py": "7d11cbe156ddf01ee6a6684a61e4fd0157b03e3ec5c88a0ea48b49698e90b4ec",
+    "src/mia/cli.py": "0b26a38030c11c37fae02834a2570d66c0e1810aa693ec3f17b642b38e41237c",
+    "src/mia/compilers/__init__.py": "0f6be38e344582ca15ef470b14f0a12f797ff9cbbd9b6d381262cbff19fa0bd9",
+    "src/mia/compilers/base.py": "ac23cef8e97b56ca497051b979d4653e064a33742d5991b87e811241039b961b",
+    "src/mia/compilers/duckdb.py": "04b9abc00f0c2d5f45be7ab2142dfc433ed2d52d7754d647345b87c21a79ed30",
+    "src/mia/compilers/metricflow.py": "8bafd85c576149acb86385b4f727b29604e889725b444fa1ebfbf364c7c064f1",
+    "src/mia/compilers/utils.py": "a1efb2d4a314fe5cb4fb1c4bf232bc0f366db8eb11fdd0273c627b208e1c3965",
+    "src/mia/contracts.py": "1ce17c1beedf2f6ee667aed6af57c83986030a2f88f3b6613044b3b5889c7362",
+    "src/mia/evaluation.py": "a73cc356d3df1f8931d696d278aaef2ff9c76ca08263001e47f3fb523afd9156",
+    "src/mia/generation.py": "ff6fbfa6ab197a043a9686f3b962889e382931803db1af1b805f5258e11bc0d0",
+    "src/mia/models.py": "81725dcc47f2411721a40b7c03cb3276df0ec2d116328857698f5978110dad26",
+    "src/mia/phase5.py": "c3abbfa84931bd05ba6bb8881c4562985c7e0f5a3fe510854097a815bd6d673a",
+    "src/mia/phase5_systems.py": "76dff323a1f38fbd587cec5ed030048e1377a6e1a4cfde85dc29b851b569530d",
+    "src/mia/registry.py": "fd1d1330c1a1a373262d5337a35e9d3173d13c86e2a9b5823b9e31abef73d360",
+    "src/mia/v2_canonicalization.py": "715fa4159e7bce92f97fcc43872f9c9deb4586f52078de86b25e09e6d76569d4",
+    "src/mia/v2_grounding.py": "90ecb0e4ee26f98e7c22434e04a7bd8b1b494e218caea52ad060c19728354c22",
+    "src/mia/v2_matched_baselines.py": "0e26758146b54b51ba5b581c578738e88a90e3e35b3d56e5fd25afdbcca1ed2c",
+    "src/mia/v2_normalization.py": "3249cfec0efd89f56132fd5b59fe818b3c772bc0409d74fdc6383475ed9745ee",
+    "src/mia/v2_system.py": "c444f38018c2f4433b18d343ae2e8296dc91b57000270cba9a14cc1ae0f10e1a",
+    "src/mia/validation.py": "3758813b86cad0165b57f1f2ffe6005a91cbdeb1f6046332ba316e08c9e26d6c",
+    "src/mia/validation_v21.py": "b2b594e8ded8ebec88b060eee134d9e49b287dd9b713f0dbb2fe8ea36245f091",
+    "src/mia_bench/analysis_plan_v3.py": "b5b7d28cec8461c070f7fb1176892a3f7dc7f18b8a2b69b99530302438b0a37d",
+    "src/mia_bench/audit.py": "a89ada3a3551f73b1ded5dc7af67d29a18beda7093b9c9afe13f6b539ac4ea4b",
+    "src/mia_bench/bindings_v2.py": "8c9b191f5ba585b1e0fd9694fcb534076fb574258e8a4ae09083a64b1f297749",
+    "src/mia_bench/counterfactual.py": "dc4c30ab9102fd06cb93acbca7efad8bc71e08451a182f76241fdeb480c22872",
+    "src/mia_bench/execution_control_v3.py": "7a3882df5ca03263fb71346bfd25489f64992c588f3bae554fac8ec2c9bfebec",
+    "src/mia_bench/execution_runner_v3.py": "58a44b2253f82850e99f5f3d7de8e9ae5ee89018f5d263ca57c818f84b0b276c",
+    "src/mia_bench/expanded_serialization_v3.py": "e7e48137a6ddead0d20ff25950d1ae08c3ec124bf724b68eb09f35449650d89d",
+    "src/mia_bench/expanded_worlds_v3.py": "f0ee542cbc7282ab615538e72508bd2579bc4375de6d6b9b45b94858e107a23d",
+    "src/mia_bench/final_manifest_v3.py": "a4d771d903a6358bc458a0f4f5e0ab54da930a6922d71d9319573ff1c439d41a",
+    "src/mia_bench/generator_v2.py": "b6c850cc109632da98e1cd51983567ae4645b6cf810532a1865c0b0b5dc87546",
+    "src/mia_bench/generator_v3.py": "efe1e4e4b3bf9def65cfd4fe04797963a5be2e1b9d39e9bf4e9b3afabb21f4b8",
+    "src/mia_bench/leakage_diagnostics_v3.py": "baed9d419a16891a8ff1fd4cd0a1ac507ea8913f5da6ded603bf5f727b69eea1",
+    "src/mia_bench/mia_adapter_v21.py": "cc9bad2fedeee32e7f429d0bcb13109c8ec423442ab31696b664b85f0e2919cb",
+    "src/mia_bench/mia_adapter_v3.py": "e9725b247f04bdd740f035266080f6b0f016c2b8cac4c76670e26e09689b885f",
+    "src/mia_bench/mia_representability_v3.py": "3d3b407408c85449e62a1ce17eb22f109ba74734a8511a2f06e1e30e2f8e6b11",
+    "src/mia_bench/natural_surfaces_v3.py": "f9e85fbab869069f2fc297c329de24f4cb943786151bf999e9773b241bfea686",
+    "src/mia_bench/oracle.py": "0277c4b5952a26eb1fd7aa2f71ae30cd3f6cb49e7b89d8ed7951ad25745b81e0",
+    "src/mia_bench/oracle_v2.py": "5e16ff5fb0129048f4ff3e7d0a931226c8ba3afc91b255700fdd36465a1089c3",
+    "src/mia_bench/oracle_v3.py": "3476c96c431064b62e7ca9f8a2c33f73d5c80942056bc1853e2dc51a0769d27f",
+    "src/mia_bench/oracle_v4.py": "a76eaa68ee0ae91d0a9c519d966b9f5c4b699f15b64d4b4547611dc3cc058aa5",
+    "src/mia_bench/pilot.py": "a4de5ed41bc501366d8390f975a98ec7c31633ec11df84d097bfbbe1b6db723a",
+    "src/mia_bench/preprovider_diagnostics_v3.py": "5978fae56999cff77e2018eb6a821f40b660d752f9365bda2b13fb7f9c0e36a5",
+    "src/mia_bench/proprietary_replication_v36.py": "657b1d57ce4ee1fb2172e593ccfd0ee34df0e7696a5e608e359e5ea786779f87",
+    "src/mia_bench/provider_adapters_v3.py": "aa48b13df098579117ac4b3458806ae32dd5e5c8717843be756984e34c30ec0a",
+    "src/mia_bench/provider_protocol_v3.py": "5a43bc0f3d2559fbf3d1c6e2555f94e0c251bbe29b692e7cb9b39c4ba8273bd1",
+    "src/mia_bench/provider_runner_v3.py": "3b414bb22f9d8de9ec7b0662804bf23762f264e7a79f3ccab3ab3f25a4b28359",
+    "src/mia_bench/qwen_failure_audit_v35.py": "14d71b9ccb0ad29ecd8fc335deca74141e03ec7531f4e0c475455b2317f65ea3",
+    "src/mia_bench/qwen_main_analysis_v35.py": "47332e0c1f5e89b0248b23642a545dd7cfcbe507f52ac261941cd4723cc6c4c6",
+    "src/mia_bench/qwen_mlx_v33.py": "891c9422aa7f1e4a51c6f2b1327b5cc7a588fd1128c22eb1a7dcf593a8484250",
+    "src/mia_bench/qwen_vllm_v35.py": "33741293af4fb78701cd7a3443761d44b458fc679b3d2cb272f8e37817ac2976",
+    "src/mia_bench/replication_evidence_v36.py": "a19d96e652504319778b11e3919a4aae87dcf300c644b5af18179cd4096018f0",
+    "src/mia_bench/response_resume_v3.py": "f29291770f927b638f4cd1c56062f01649accfc6a8436a553b835423af51ba80",
+    "src/mia_bench/runner_contract_v2.py": "2192bc7519958719e57e7d0daa65f37f81d23a48ca1c88250baa6214cb810411",
+    "src/mia_bench/runner_contract_v3.py": "e704726a75d6f4bcb70d4791d6352a5276b9c81a70cd1ca611891b4961e304e9",
+    "src/mia_bench/serialization_v2.py": "3448f40f74df6a2f170e801b3446fe97a9903d77fdc41d63de9777bfc5eebec2",
+    "src/mia_bench/serialization_v3.py": "8d61064c289a57a19c8adb1ef81ec9e75bde77fe8e751e540a914ffd2f937b31",
+    "src/mia_bench/smoke_fixture_v3.py": "a731e139967e4283975504bba972202bc6d68ffa19ba94e07b8dbc7f0622b927",
+    "src/mia_bench/system_bindings_v2.py": "42a1a1db5580c52a1952376c8bdca68e79974568e2b04b4e3c0738b0bf6be0d8",
+    "src/mia_bench/worlds_v2.py": "19518f1f40895276b296a339115330989006b32c7cf11ed04700f718499c4bb9"
+  },
+  "main_action_supplement": {
+    "anthropic": {
+      "all_scenarios": {
+        "B4": {
+          "allow_executes": 62,
+          "terminal_failures": 0,
+          "three_way_correct": 112,
+          "unsafe_executes": 3
+        },
+        "B5": {
+          "allow_executes": 60,
+          "terminal_failures": 4,
+          "three_way_correct": 98,
+          "unsafe_executes": 6
+        },
+        "allow": 62,
+        "diagnostics": {},
+        "disagreements": 14,
+        "non_allow": 58,
+        "outcomes": {
+          "b4_only_correct": 14
+        },
+        "transition_counts": {
+          "ALLOW:execute->clarify": 2,
+          "CLARIFY:clarify->execute": 2,
+          "CLARIFY:clarify->reject": 1,
+          "CLARIFY:clarify->terminal_failure": 3,
+          "REJECT:reject->clarify": 4,
+          "REJECT:reject->execute": 1,
+          "REJECT:reject->terminal_failure": 1
+        },
+        "units": 120,
+        "unsafe_executes_introduced": 3,
+        "unsafe_executes_prevented": 0
+      },
+      "authority": {
+        "B4": {
+          "allow_executes": 34,
+          "terminal_failures": 0,
+          "three_way_correct": 84,
+          "unsafe_executes": 3
+        },
+        "B5": {
+          "allow_executes": 33,
+          "terminal_failures": 4,
+          "three_way_correct": 71,
+          "unsafe_executes": 6
+        },
+        "allow": 34,
+        "diagnostics": {},
+        "disagreements": 13,
+        "non_allow": 58,
+        "outcomes": {
+          "b4_only_correct": 13
+        },
+        "transition_counts": {
+          "ALLOW:execute->clarify": 1,
+          "CLARIFY:clarify->execute": 2,
+          "CLARIFY:clarify->reject": 1,
+          "CLARIFY:clarify->terminal_failure": 3,
+          "REJECT:reject->clarify": 4,
+          "REJECT:reject->execute": 1,
+          "REJECT:reject->terminal_failure": 1
+        },
+        "units": 92,
+        "unsafe_executes_introduced": 3,
+        "unsafe_executes_prevented": 0
+      }
+    },
+    "openai": {
+      "all_scenarios": {
+        "B4": {
+          "allow_executes": 62,
+          "terminal_failures": 0,
+          "three_way_correct": 118,
+          "unsafe_executes": 1
+        },
+        "B5": {
+          "allow_executes": 62,
+          "terminal_failures": 0,
+          "three_way_correct": 118,
+          "unsafe_executes": 1
+        },
+        "allow": 62,
+        "diagnostics": {},
+        "disagreements": 2,
+        "non_allow": 58,
+        "outcomes": {
+          "b4_only_correct": 1,
+          "b5_only_correct": 1
+        },
+        "transition_counts": {
+          "CLARIFY:clarify->reject": 1,
+          "CLARIFY:reject->clarify": 1
+        },
+        "units": 120,
+        "unsafe_executes_introduced": 0,
+        "unsafe_executes_prevented": 0
+      },
+      "authority": {
+        "B4": {
+          "allow_executes": 34,
+          "terminal_failures": 0,
+          "three_way_correct": 90,
+          "unsafe_executes": 1
+        },
+        "B5": {
+          "allow_executes": 34,
+          "terminal_failures": 0,
+          "three_way_correct": 90,
+          "unsafe_executes": 1
+        },
+        "allow": 34,
+        "diagnostics": {},
+        "disagreements": 2,
+        "non_allow": 58,
+        "outcomes": {
+          "b4_only_correct": 1,
+          "b5_only_correct": 1
+        },
+        "transition_counts": {
+          "CLARIFY:clarify->reject": 1,
+          "CLARIFY:reject->clarify": 1
+        },
+        "units": 92,
+        "unsafe_executes_introduced": 0,
+        "unsafe_executes_prevented": 0
+      }
+    },
+    "qwen": {
+      "all_scenarios": {
+        "B4": {
+          "allow_executes": 224,
+          "terminal_failures": 0,
+          "three_way_correct": 404,
+          "unsafe_executes": 27
+        },
+        "B5": {
+          "allow_executes": 220,
+          "terminal_failures": 0,
+          "three_way_correct": 372,
+          "unsafe_executes": 44
+        },
+        "allow": 240,
+        "diagnostics": {},
+        "disagreements": 64,
+        "non_allow": 240,
+        "outcomes": {
+          "b4_only_correct": 43,
+          "b5_only_correct": 11,
+          "neither_correct": 10
+        },
+        "transition_counts": {
+          "ALLOW:clarify->execute": 6,
+          "ALLOW:execute->clarify": 7,
+          "ALLOW:execute->reject": 3,
+          "ALLOW:reject->clarify": 1,
+          "CLARIFY:clarify->execute": 17,
+          "CLARIFY:execute->clarify": 2,
+          "CLARIFY:reject->clarify": 2,
+          "REJECT:clarify->execute": 3,
+          "REJECT:clarify->reject": 1,
+          "REJECT:execute->clarify": 6,
+          "REJECT:reject->clarify": 11,
+          "REJECT:reject->execute": 5
+        },
+        "units": 480,
+        "unsafe_executes_introduced": 25,
+        "unsafe_executes_prevented": 8
+      },
+      "authority": {
+        "B4": {
+          "allow_executes": 120,
+          "terminal_failures": 0,
+          "three_way_correct": 297,
+          "unsafe_executes": 26
+        },
+        "B5": {
+          "allow_executes": 116,
+          "terminal_failures": 0,
+          "three_way_correct": 265,
+          "unsafe_executes": 43
+        },
+        "allow": 135,
+        "diagnostics": {},
+        "disagreements": 62,
+        "non_allow": 234,
+        "outcomes": {
+          "b4_only_correct": 42,
+          "b5_only_correct": 10,
+          "neither_correct": 10
+        },
+        "transition_counts": {
+          "ALLOW:clarify->execute": 5,
+          "ALLOW:execute->clarify": 7,
+          "ALLOW:execute->reject": 2,
+          "ALLOW:reject->clarify": 1,
+          "CLARIFY:clarify->execute": 17,
+          "CLARIFY:execute->clarify": 2,
+          "CLARIFY:reject->clarify": 2,
+          "REJECT:clarify->execute": 3,
+          "REJECT:clarify->reject": 1,
+          "REJECT:execute->clarify": 6,
+          "REJECT:reject->clarify": 11,
+          "REJECT:reject->execute": 5
+        },
+        "units": 369,
+        "unsafe_executes_introduced": 25,
+        "unsafe_executes_prevented": 8
+      }
+    }
+  },
+  "provider_calls": 0,
+  "raw_holdout_replay": {
+    "anthropic": {
+      "archive_sha256": "b9ea32278093bcfaaa7e0f5de661976fb240b822fe398f8bb0fd176df591f421",
+      "invalid_responses": {
+        "B2": 14,
+        "B4": 2,
+        "B5": 1
+      },
+      "provider_sha256": "d065d414ae3983378ddaf67b4359d19821978c6f9e1011e881dbe39a10435dcc"
+    },
+    "openai": {
+      "archive_sha256": "eb37a4ec0e6b8c1e595706e8573d09e2d5d64b06a82368f6fcaa1f6a2823214a",
+      "invalid_responses": {},
+      "provider_sha256": "cb051c2b97a22e7acd1ebb0ac7a384610133e0d5359e8bf53f4d259050f39b0f"
+    },
+    "qwen": {
+      "archive_sha256": "e63c269bd92a96927d65b7049758c94471fd3b986caeab18157cb03b1ba990f9",
+      "invalid_responses": {},
+      "provider_sha256": "e65a075d54d0103a647b1b6623be26a150c59736ac9e18463e7d9b102dd2e0f6"
+    }
+  },
+  "role": "retrospective descriptive audit; no new confirmatory tests or causal effects",
+  "source_revision": "37ab69a7b076f4386b62a5530b8ea8ce9e038e95"
+}
