@@ -77,8 +77,10 @@ The imported source is [`hollylessthan/metric-intent-assurance`](https://github.
 
 Original model prompts were frozen before holdout unlock, and their holdout outputs were collected under that protocol. **The selection of the present B4/B5 paper question and its additional audits was retrospective.** Results are descriptive, not a preregistered test of this particular comparison. The synthetic worlds and shared scenarios constrain generalizability. Action accuracy alone does not establish exact metric interpretation, numerical correctness, authorization enforcement, or production safety.
 
-## Citation, licensing, and releases
+## Archived version and citation
 
-The repository includes an [Apache-2.0 license](LICENSE). For a fixed research reference, cite a tagged GitHub release (and its corresponding commit) once one has been published; a Zenodo DOI can then archive that immutable snapshot. **At this writing no GitHub release or DOI is asserted here.** Avoid citing the moving `main` branch as though it were a frozen release.
+**Frozen artifact v1.0.0:** [Zenodo record](https://zenodo.org/records/23649604) · [version-specific DOI](https://doi.org/10.5281/zenodo.23649604) · [GitHub release](https://github.com/hollylessthan/governed-metric-decisions-artifact/releases/tag/v1.0.0).
 
-This archive contains evidence and verification scripts, not an accepted-paper claim.
+For reproducibility and citations to these frozen experimental records, use the version-specific DOI `10.5281/zenodo.23649604`, rather than the moving `main` branch. Subsequent commits to this repository do not alter the archived v1.0.0 snapshot. The repository is available under the [Apache-2.0 license](LICENSE).
+
+The artifact supports deterministic, offline regeneration and verification of reported analysis using the archived benchmark records and model outputs; it does not require or repeat live model inference. It is supporting research evidence, not a claim that a paper has been accepted.
