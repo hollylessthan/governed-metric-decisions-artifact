@@ -17,4 +17,4 @@ jobs:
       - name: Verify frozen routing evidence and manuscript draft
         run: python scripts/agent_2027_routing_evidence.py --check
       - name: Independently implemented rule cross-check and original audit records
-        run: python scripts/agent_2027_label_error_audit.py --check
+        run: PYTHONPATH=src python scripts/agent_2027_label_error_audit.py --check
