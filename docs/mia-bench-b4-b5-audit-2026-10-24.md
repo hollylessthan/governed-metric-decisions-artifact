@@ -73,11 +73,10 @@ The original deduplicated authority cohorts have 369 Qwen units and 92 units in 
 
 ## Reproduction and limits
 
-From a complete repository checkout:
+From the artifact repository root:
 
 ```bash
 python scripts/agent_2027_routing_evidence.py --check
-PYTHONPATH=src python -m unittest discover -s tests -p test_b4_b5_audit.py -v
 ```
 
-Use a new output directory. The script reads the three committed holdout archives without extracting untrusted ZIP paths into the checkout, and never overwrites frozen evidence. It reuses the original workload, oracle, parsers and semantic-unit selection. The main action supplement is not raw-main replay. The audit adds no significance tests, repeats, confidence sweep or outcome-based case sampling. The 21 holdout records are exhaustive for action disagreement, not all errors shared by both routes; agreement does not imply correctness. Synthetic author-set policy validity, limited independent labeling, shared counterfactual dependence, prompt-contract differences and opened-workload limitations remain.
+The bundled routing check reads committed scenario results and summaries, verifies source hashes, and checks the generated routing evidence without changing frozen files. The original full-study audit separately replayed the committed holdout archives with frozen parsers and semantic-unit selection; that audit utility is not bundled here. The main action supplement is not raw-main replay. The audit adds no significance tests, repeats, confidence sweep or outcome-based case sampling. The 21 holdout records are exhaustive for action disagreement, not all errors shared by both routes; agreement does not imply correctness. Synthetic author-set policy validity, limited independent labeling, shared counterfactual dependence, prompt-contract differences and opened-workload limitations remain.
