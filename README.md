@@ -76,7 +76,7 @@ The [GitHub Actions reproduction workflow](.github/workflows/reproduce.yml) runs
 
 Original research was performed in the private development repository `hollylessthan/metric-intent-assurance`; outside readers cannot access it. Frozen inputs and verification code needed by the documented commands are distributed in this public artifact. Source revision: `f4cfd26d5fb1a2770a527ae31d25f8afebbc928f`. Generated evidence records file-level hashes so the copied inputs can be checked independently.
 
-Original model prompts were frozen before holdout unlock, and their holdout outputs were collected under that protocol. **The evaluated model outputs were collected using prompts frozen before holdout access.** Reported comparisons and analyses are descriptive; they are not a preregistered confirmatory evaluation of the six routes. The synthetic worlds and shared scenarios constrain generalizability. Action accuracy alone does not establish exact metric interpretation, numerical correctness, authorization enforcement, or production safety.
+The evaluated model outputs were collected using prompts frozen before holdout access. Reported comparisons and analyses are descriptive; they are not a preregistered confirmatory evaluation of the six routes. The synthetic worlds and shared scenarios constrain generalizability. Action accuracy alone does not establish exact metric interpretation, numerical correctness, authorization enforcement, or production safety.
 
 ## Archived versions and citation
 

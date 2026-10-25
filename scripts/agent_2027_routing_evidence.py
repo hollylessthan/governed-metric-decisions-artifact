@@ -97,7 +97,7 @@ def build(root=ROOT):
     root = Path(root)
     frozen = json.loads((root / SYNTHESIS).read_text())['models']
     audit = json.loads((root / AUDIT).read_text())
-    data = {'source_revision': SOURCE_REVISION, 'role': 'retrospective descriptive paper selection',
+    data = {'source_revision': SOURCE_REVISION, 'role': 'descriptive analysis of frozen model outputs',
             'provider_calls': 0, 'holdout': {}, 'main_action_supplement': {}}
     for name, key in MODEL_KEYS.items():
         values = frozen[key]['all_authority_units_descriptive']

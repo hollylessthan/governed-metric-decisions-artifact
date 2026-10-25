@@ -1,4 +1,4 @@
-# Retrospective B4/B5 disagreement audit
+# B4/B5 disagreement audit of frozen outputs
 
 See the [assessment and scope](../../docs/mia-bench-b4-b5-audit-2026-10-24.md).
 
