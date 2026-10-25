@@ -1,6 +1,6 @@
 # B4 versus B5: exhaustive offline disagreement audit
 
-Prepared 2026-10-24 PT from repository revision `37ab69a7b076f4386b62a5530b8ea8ce9e038e95`. This is a retrospective descriptive audit, not a new frozen hypothesis, causal experiment or novelty clearance. No model calls were made; original results and execution gates are unchanged.
+Prepared 2026-10-24 PT from repository revision `37ab69a7b076f4386b62a5530b8ea8ce9e038e95`. This audit describes completed frozen experiments; it is not a new confirmatory test or a causal experiment. No model calls were made; original results and execution gates are unchanged.
 
 **Finding:** adding the B2 candidate and B5 review instructions did not produce a consistent observed advantage over direct B4 routing. The retained data do not isolate a new mechanism explaining why. Most valid-output holdout disagreements occur without any normalized candidate-field difference from the canonical reference. The paper can report these bounded observations, but should not claim that candidate anchoring, corrupted interpretations or a new router-selection rule have been demonstrated.
 
@@ -10,7 +10,7 @@ The audit pairs all 1,080 available model/scenario action records: 720 main-set 
 
 The main supplement uses committed action tables only. It covers every main disagreement but does not infer candidate-level mechanisms. Main and holdout are reported separately. Holdout candidate-level review re-extracts all three original raw evidence ZIPs, verifies archive/internal/payload hashes and record chains, uses frozen parsers and bounded format-repair handling, and reconciles B4/B5 outcomes with the committed tables. It checks actual request policies, case/schema material, governed input and B2-to-B5 candidate identity. This is stronger than reading only the earlier MIA-centered decomposition; it is not a fresh provider reproduction.
 
-The [script](../scripts/mia_bench_b4_b5_audit.py), [summary](../reports/mia-bench-b4-b5-audit/summary.json), [all disagreement records](../reports/mia-bench-b4-b5-audit/cases.jsonl) and [complete holdout review](../reports/mia-bench-b4-b5-audit/holdout-review.md) make the accounting inspectable. Raw main archives are not a dependency of this audit. The source revision identifies the input base; the summary separately hashes the new audit script and every input dependency.
+The original full-study audit script (not bundled), [summary](../reports/mia-bench-b4-b5-audit/summary.json), [all disagreement records](../reports/mia-bench-b4-b5-audit/cases.jsonl) and original narrative holdout review (not bundled) make the accounting inspectable. Raw main archives are not a dependency of this audit. The source revision identifies the input base; the summary separately hashes the new audit script and every input dependency.
 
 ## What the systems were asked to do
 
@@ -73,11 +73,10 @@ The original deduplicated authority cohorts have 369 Qwen units and 92 units in 
 
 ## Reproduction and limits
 
-From a complete repository checkout:
+From the artifact repository root:
 
 ```bash
-python scripts/mia_bench_b4_b5_audit.py --output /tmp/b4-b5-audit
-PYTHONPATH=src python -m unittest discover -s tests -p test_b4_b5_audit.py -v
+python scripts/agent_2027_routing_evidence.py --check
 ```
 
-Use a new output directory. The script reads the three committed holdout archives without extracting untrusted ZIP paths into the checkout, and never overwrites frozen evidence. It reuses the original workload, oracle, parsers and semantic-unit selection. The main action supplement is not raw-main replay. The audit adds no significance tests, repeats, confidence sweep or outcome-based case sampling. The 21 holdout records are exhaustive for action disagreement, not all errors shared by both routes; agreement does not imply correctness. Synthetic author-set policy validity, limited independent labeling, shared counterfactual dependence, prompt-contract differences and opened-workload limitations remain.
+The bundled routing check reads committed scenario results and summaries, verifies source hashes, and checks the generated routing evidence without changing frozen files. The original full-study audit separately replayed the committed holdout archives with frozen parsers and semantic-unit selection; that audit utility is not bundled here. The main action supplement is not raw-main replay. The audit adds no significance tests, repeats, confidence sweep or outcome-based case sampling. The 21 holdout records are exhaustive for action disagreement, not all errors shared by both routes; agreement does not imply correctness. Synthetic author-set policy validity, limited independent labeling, shared counterfactual dependence, prompt-contract differences and opened-workload limitations remain.
