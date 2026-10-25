@@ -64,7 +64,6 @@ The [GitHub Actions reproduction workflow](.github/workflows/reproduce.yml) runs
 |---|---|
 | [`paper/agent-2027-routing-evidence.md`](paper/agent-2027-routing-evidence.md) | Generated result tables and interpretation boundaries |
 | [`paper/agent-2027-routing-evidence.json`](paper/agent-2027-routing-evidence.json) | Machine-readable derived evidence and input hashes |
-| [`paper/agent-2027-argument-skeleton.md`](paper/agent-2027-argument-skeleton.md) | Research prose draft; not a final accepted manuscript |
 | [`docs/mia-bench-b4-b5-audit-2026-10-24.md`](docs/mia-bench-b4-b5-audit-2026-10-24.md) | Exhaustive offline disagreement audit and scope |
 | [`reports/`](reports/) | Source summaries, detailed case records, and audit outputs |
 | [`docs/`](docs/) | Frozen original evidence and analysis snapshots |
@@ -82,4 +81,4 @@ Original model prompts were frozen before holdout unlock, and their holdout outp
 
 The repository includes an [Apache-2.0 license](LICENSE). For a fixed research reference, cite a tagged GitHub release (and its corresponding commit) once one has been published; a Zenodo DOI can then archive that immutable snapshot. **At this writing no GitHub release or DOI is asserted here.** Avoid citing the moving `main` branch as though it were a frozen release.
 
-The paper-related files currently included here are supporting research drafts and evidence, not a claim of publication or acceptance.
+This archive contains evidence and verification scripts, not an accepted-paper claim.
