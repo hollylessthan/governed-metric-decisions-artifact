@@ -1,0 +1,69 @@
+{
+  "schema_version": "mia-bench-holdout-enable-v3.8",
+  "amendment_sha256": "249e59a716751205825e1e2f418352b800b6fb8c40ec7d3557529b675deedc0b",
+  "approved_smoke_model_keys": [],
+  "approved_holdout_model_keys": [
+    "primary_open_weight",
+    "replication_openai",
+    "replication_anthropic"
+  ],
+  "budgets": {
+    "replication_openai": {
+      "holdout": {
+        "expected_calls": 480,
+        "hard_call_cap": 2400,
+        "spend_cap_usd": "30"
+      }
+    },
+    "replication_anthropic": {
+      "holdout": {
+        "expected_calls": 480,
+        "hard_call_cap": 2400,
+        "spend_cap_usd": "30"
+      }
+    },
+    "primary_open_weight": {
+      "holdout": {
+        "expected_calls": 480,
+        "hard_call_cap": 2400,
+        "spend_cap_usd": "0"
+      }
+    }
+  },
+  "evidence_roots": {
+    "replication_openai": {
+      "holdout": "provider_runs/holdout-v39/replication_openai-holdout"
+    },
+    "replication_anthropic": {
+      "holdout": "provider_runs/holdout-v39/replication_anthropic-holdout"
+    },
+    "primary_open_weight": {
+      "holdout": "provider_runs/holdout-v39/primary_open_weight-holdout"
+    }
+  },
+  "smoke_references": {
+    "replication_openai": {
+      "manifest_sha256": "b405fdcaa6f6e027e937d4ac7fb54e690b34b759b73d33c9619270b5fc7bb890",
+      "provider_sha256": "384ef4379cefd7399b09a06cd127adae633896d9856f7a506e036bfee45e9497",
+      "probe_sha256": null
+    },
+    "replication_anthropic": {
+      "manifest_sha256": "bf42eec5da7e3bd2aed83a92ad0446c664a37d3c6c35b9f1240587060d00518d",
+      "provider_sha256": "8cf57e80122bb8964b1a188847e75a5f24c832bc7ead9eb01f9fe97529259cfd",
+      "probe_sha256": null
+    },
+    "primary_open_weight": {
+      "manifest_sha256": "06d907a83393a10a9b7c6001fbbccc4949eb4d45f2374e84b4ec737f7c1f28fd",
+      "provider_sha256": "d6248efcd06b0aebcb13e2ba14fe78105cc6ab65e5a6cb1c2ba0190c3e9f908b",
+      "probe_sha256": "fed46f0dd119eb8fa5467168de4ea4dcc38e43a9efaadb2b4bbb1a3665dcf9cb"
+    }
+  },
+  "qwen_rental": {
+    "budget_usd": "30",
+    "container_image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+    "hourly_rate_usd": "1.82",
+    "pod_id": "bexetjex3gnyo2",
+    "runtime_sha256": "9577bb1383cbec491e0bdb269635eab35299f6370295d3b2f1652e53c120d33c"
+  },
+  "status": "Qwen primary holdout enabled from reviewed split-specific smoke on unchanged stable runtime; all smoke closed; completed proprietary records retained"
+}

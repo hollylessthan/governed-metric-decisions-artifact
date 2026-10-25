@@ -1,0 +1,12 @@
+{
+  "protocol_sha256": "c155dfc24daeb8b61b2b41d75e5c08892362146061fe139442fd184d05f48f89",
+  "enabled_model_keys": [
+    "replication_openai",
+    "replication_anthropic"
+  ],
+  "holdout_enabled": false,
+  "reviewed_smoke_pr": "https://github.com/hollylessthan/metric-intent-assurance/pull/193",
+  "review_record": "docs/mia-bench-proprietary-v36-anthropic-enablement-review.md",
+  "execution_order": "OpenAI main evidence reviewed and merged in PR #195; Anthropic main may now run under the same frozen amendment.",
+  "reviewed_openai_main_pr": "https://github.com/hollylessthan/metric-intent-assurance/pull/195"
+}

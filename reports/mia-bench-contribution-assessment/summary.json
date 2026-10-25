@@ -1,0 +1,68 @@
+{
+  "holdout": {
+    "authority_counterfactual_pairs": 15,
+    "authority_pairs_requiring_binary_flip": 14,
+    "authority_units": 101,
+    "counterfactual_pairs": 24,
+    "feasibility_pairs": 9,
+    "scenarios": 120
+  },
+  "models": {
+    "anthropic": {
+      "authority_pairs_both_binary_decisions_correct": {
+        "B4": 15,
+        "B5": 12,
+        "MIA": 4,
+        "MIA_v21": 4
+      },
+      "full_holdout_three_way_correct": {
+        "B4": 114,
+        "B5": 106,
+        "MIA": 19,
+        "MIA_v21": 22
+      },
+      "source_files_sha256": {
+        "analysis.json": "a86982af64ca9a0635cbadbcd37831dcc8a0a0b549847aa8bf000573f7666440",
+        "scenario-results.jsonl": "a7cda6f603ead96f44bb5429853e7bf742198a17d8741042f4502d5fb85dbfae"
+      }
+    },
+    "openai": {
+      "authority_pairs_both_binary_decisions_correct": {
+        "B4": 15,
+        "B5": 15,
+        "MIA": 4,
+        "MIA_v21": 4
+      },
+      "full_holdout_three_way_correct": {
+        "B4": 117,
+        "B5": 115,
+        "MIA": 32,
+        "MIA_v21": 35
+      },
+      "source_files_sha256": {
+        "analysis.json": "5fc49c93d6c23cc4dcaa5a7b03446c4227a0f8d8936ccb48c4ccdcbd0a2a06da",
+        "scenario-results.jsonl": "1a18b1dfe33045b54c5cc3d8058125207d18f63e8e0bd0b8247f5df7ee12c026"
+      }
+    },
+    "qwen": {
+      "authority_pairs_both_binary_decisions_correct": {
+        "B4": 11,
+        "B5": 9,
+        "MIA": 3,
+        "MIA_v21": 3
+      },
+      "full_holdout_three_way_correct": {
+        "B4": 100,
+        "B5": 93,
+        "MIA": 24,
+        "MIA_v21": 26
+      },
+      "source_files_sha256": {
+        "analysis.json": "f033ac0c4f2e783396ceb97bd526aafa343af7c0ecbec9c3bacdd63e7668544a",
+        "scenario-results.jsonl": "bfa34a507fa36b190c840c7a99e87353f52250be8d845dd92328a51ba0a41907"
+      }
+    }
+  },
+  "role": "exploratory contribution assessment; derived from committed descriptive results; no new inference",
+  "source_commit": "a42e8767461a4ad38c7614f866a43c26ac956302"
+}

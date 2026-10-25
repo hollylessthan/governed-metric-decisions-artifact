@@ -1,0 +1,27 @@
+name: Offline artifact reproduction
+on:
+  pull_request:
+  push:
+    branches: [main, artifact/initial-evidence-import]
+  workflow_dispatch:
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen routing evidence and manuscript draft
+        run: python scripts/agent_2027_routing_evidence.py --check
+      - name: Independently implemented rule cross-check and original audit records
+        run: PYTHONPATH=src python scripts/agent_2027_label_error_audit.py --check
+      - name: Verify original holdout archive SHA-256
+        run: |
+          cd docs/qwen-holdout-v39-evidence-2026-10-09
+          sha256sum -c primary_open_weight-holdout-evidence-20261010T063648437724Z.zip.sha256
+          cd ../holdout-v39-proprietary-2026-10-08
+          sha256sum -c replication_openai-holdout-evidence-20261009T045641583698Z.zip.sha256
+          sha256sum -c replication_anthropic-holdout-evidence-20261009T054034288852Z.zip.sha256
