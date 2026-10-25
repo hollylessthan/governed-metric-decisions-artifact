@@ -11,6 +11,8 @@ authors:
     given-names: Shiqi
 repository-code: "https://github.com/hollylessthan/governed-metric-decisions-artifact"
 version: "1.1.0"
+doi: 10.5281/zenodo.23652173
+date-released: 2026-10-25
 license: Apache-2.0
 keywords:
   - agentic analytics

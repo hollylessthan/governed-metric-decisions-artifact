@@ -80,12 +80,12 @@ The evaluated model outputs were collected using prompts frozen before holdout a
 
 ## Archived versions and citation
 
-**Historical archived v1.0.0 (does not reproduce the updated manuscript Tables I and II):** [Zenodo record](https://zenodo.org/records/23649604) · [version-specific DOI](https://doi.org/10.5281/zenodo.23649604) · [GitHub release](https://github.com/hollylessthan/governed-metric-decisions-artifact/releases/tag/v1.0.0).
+**Current archived release v1.1.0:** [Zenodo record](https://zenodo.org/records/23652173) · [version-specific DOI](https://doi.org/10.5281/zenodo.23652173) · [GitHub release](https://github.com/hollylessthan/governed-metric-decisions-artifact/releases/tag/v1.1.0).
 
-**Do not cite v1.0.0 for the revised paper.** Its DOI `10.5281/zenodo.23649604` identifies only the older frozen snapshot. Cite the forthcoming version-specific v1.1.0 DOI after Zenodo creates it. Subsequent commits to this repository do not alter the archived v1.0.0 snapshot. The repository is available under the [Apache-2.0 license](LICENSE).
+The v1.1.0 release reproduces the current AGENT 2027 manuscript's generated Tables I and II. Cite its fixed DOI `10.5281/zenodo.23652173`, not the moving main branch.
 
-The artifact supports deterministic, offline regeneration and verification of reported analysis using the archived benchmark records and model outputs; it does not require or repeat live model inference. It is supporting research evidence, not a claim that a paper has been accepted.
+**Historical v1.0.0:** [Zenodo record](https://zenodo.org/records/23649604). This older archive predates the six-route paper-table reproduction additions. The repository uses the [Apache-2.0 license](LICENSE).
 
-## Current paper synchronization (v1.1.0 candidate)
+## Current paper-table reproduction
 
-Reproduce manuscript Tables I and II with `python scripts/agent_2027_paper_tables.py --check`. Inputs include `reports/agent-2027-differentiation/summary.json` and the frozen case records. Only `paper/agent2027/generated/quality.tex` and `kinds.tex` are incorporated as Tables I and II in the current manuscript; `changes.tex`, `pairs.tex`, and `disagreements.tex` are auxiliary generated outputs. The v1.0.0 Zenodo DOI documents the earlier artifact snapshot, not these added outputs; cite the new version-specific DOI only after archiving v1.1.0.
+Reproduce manuscript Tables I and II with `python scripts/agent_2027_paper_tables.py --check`. Inputs include `reports/agent-2027-differentiation/summary.json` and the frozen case records. Only `paper/agent2027/generated/quality.tex` and `kinds.tex` are incorporated as Tables I and II in the current manuscript; `changes.tex`, `pairs.tex`, and `disagreements.tex` are auxiliary generated outputs. The archived v1.1.0 source snapshot contains the table generator and its inputs.
