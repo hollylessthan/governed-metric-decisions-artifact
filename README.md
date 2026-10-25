@@ -1,6 +1,6 @@
-# Governed Metric Decisions — AGENT 2027 Reproduction Artifact (candidate)
+# Governed Metric Decisions — Reproduction Artifact
 
-**Draft / private until publication review.** This package contains the frozen source evidence and calculation script for the empirical study of governed-metric execution decisions. It is not yet an independently validated public release.
+This package contains the frozen source evidence and calculation script for the empirical study of governed-metric execution decisions.
 
 ## Offline reproduce and check (no model API calls)
 
@@ -25,5 +25,3 @@ B4 (direct) versus B5 (candidate-assisted) is the central same-task descriptive 
 ## Current status and remaining review
 
 Original source: `hollylessthan/metric-intent-assurance`, source revision `f4cfd26d5fb1a2770a527ae31d25f8afebbc928f` (as recorded by the generator). File-level hashes are in the generated JSON. Initial import also includes audit interpretation.
-
-Before public release: run the command in a clean checkout, inspect differences if any, validate licensing/privacy/secrets, reconcile final camera-ready tables, add provider run snapshots/metadata where missing, and tag an immutable release. Public Zenodo DOI is optional and comes afterward. **A passing clean-room reproduction has not yet been recorded.**
